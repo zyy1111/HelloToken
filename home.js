@@ -1,14 +1,14 @@
-var accounts = "";
+let accounts = "";
+let inputValue = "";
 const address = "http://13.56.163.182:8000/transfer-token";
 
-var ethereumButton = document.querySelector(".connect");
+const ethereumButton = document.querySelector(".connect");
 
 function handleChange(val) {
   inputValue = val;
 }
 
 ethereumButton.addEventListener("click", () => {
-  console.log(inputValue);
   if(inputValue.toLowerCase() === 'hello') {
     submit();
   } else {
@@ -46,5 +46,4 @@ async function submit() {
   }).catch((err) => {
       console.log(err);
   });
-
 }
